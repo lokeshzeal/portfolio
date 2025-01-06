@@ -46,11 +46,9 @@ function Project() {
                 <div className="next-page">
                     <Link className="btn btn-dark rounded-circle ml-4" to={"/skill"}><i class="fa fa-arrow-left" aria-hidden="true"></i></Link>
                     <div className="row mt-5">
-                        {
-                            projectList.map((card) => {
-                                return <ProjectCard card={card} />
-                            })
-                        }
+                        {projectList.map((card, index) => (
+              <ProjectCard key={index} card={card} />
+            ))}
                     </div>
                     <Link className="btn btn-dark rounded-circle ml-4" to={"/contact"}><i class="fa fa-arrow-right" aria-hidden="true"></i></Link>
                 </div>
